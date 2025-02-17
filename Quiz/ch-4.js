@@ -10,11 +10,32 @@
 //     return functions;
 // }
 
-// var ch4Quiz = createClosures();
+// var answer = ch4Quiz();
 
-// console.log(ch4Quiz[0]()); 3
-// console.log(ch4Quiz[1]()); 3
-// console.log(ch4Quiz[2]()); 3
+// console.log(answer[0]()); 3
+// console.log(answer[1]()); 3
+// console.log(answer[2]()); 3
 
 /** ---------------------------------------------------------------- */ 
-// var의 스코프 범위 때문애 closure를 형성하지 않아 let/ const 로 수정함, 혹은 IIFE 사용
+// var의 스코프가 함수단위 이기 때문에 항상 같은 i를 참조하게 됨. let/ const 로 수정함, 혹은 IIFE 사용
+// 추가설명.
+// function ch4Quiz() {
+//  var functions = [];
+//  var i = 0;
+//
+//  function loopIteration() {
+//      if (i >= 3) return;
+//
+//      functions[i] = function() {
+//          return i;
+//      };
+//
+//      i++;
+//      loopIteration(); 
+//  }
+//
+//  loopIteration();
+//
+// return functions;
+// }
+
